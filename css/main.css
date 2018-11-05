@@ -34,8 +34,8 @@ h1 img {
 }
 
 h1 span {
-    color: hsl(0deg, 60%, 100%);
-    text-shadow: 1px 1px 1px hsl(0deg, 60%, 0%);
+    color: hsl(12deg, 68%, 100%);
+    text-shadow: 1px 1px 1px hsl(12deg, 68%, 0%);
     font-size: 6vw;
     position: relative;
     left: 1rem;
@@ -78,8 +78,8 @@ button {
     align-self: flex-end;
     padding: 3px 7px;
     margin: 0 0 2px 0;
-    background-color: hsl(0deg, 60%, 60%);
-    color: hsl(0deg, 60%, 100%);
+    background-color: hsl(12deg, 68%, 60%);
+    color: hsl(12deg, 68%, 100%);
     font-size: 0.8rem;
     border-radius: 5px;
 }
