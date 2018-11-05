@@ -1,0 +1,176 @@
+@import url('some google sans-serif font');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+}
+
+
+header {
+    background-image: url(../img/jakob-owens-486033-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+}
+
+
+h1 img {
+    width: 10vw;
+    position: relative;
+    left: 1rem;
+    top: 1rem;
+}
+
+h1 span {
+    color: hsl(0deg, 60%, 100%);
+    text-shadow: 1px 1px 1px hsl(0deg, 60%, 0%);
+    font-size: 6vw;
+    position: relative;
+    left: 1rem;
+}
+
+
+form {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "w w"
+        "in out"
+        "min max"
+        "number b";
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.place {
+    grid-area: w;
+}
+
+label {
+    display: block;
+    font-size: 0.8rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.1rem;
+}
+
+.search {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+button {
+    align-self: flex-end;
+    padding: 3px 7px;
+    margin: 0 0 2px 0;
+    background-color: hsl(0deg, 60%, 60%);
+    color: hsl(0deg, 60%, 100%);
+    font-size: 0.8rem;
+    border-radius: 5px;
+}
+
+
+main {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #aaa;
+}
+
+input#min.price::after {
+    content: "$"attr(data-price);
+    display: block;
+    margin-top: -1.5rem;
+    position: relative;
+    top: 8px;
+}
+
+input.price#max::after {
+    content: "$"attr(data-price);
+    display: block;
+    margin-top: -1.5rem;
+    position: relative;
+    top: 8px;
+
+}
+
+div:nth-child(4),
+div:nth-child(5) {
+    position: relative;
+    top: 5px;
+}
+
+@media (max-width:500px) {
+
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    div {
+        padding: 5px;
+    }
+
+    button {
+        margin-top: 10px;
+    }
+
+
+    h1 img {
+        width: 15vw;
+
+    }
+
+    h1 span {
+
+        font-size: 10vw;
+
+    }
+
+}
+
+@media (min-width:800px) {
+    main {
+        display: flex;
+        flex-direction: row;
+    }
+
+    form {
+        width: 60%;
+    }
+
+    header {
+        width: 40%;
+        height: auto;
+    }
+
+    h1 img {
+        width: 70px;
+        display: block;
+        margin-bottom: 7.5rem;
+    }
+
+    h1 span {
+        font-size: 50px;
+
+    }
+
+}
